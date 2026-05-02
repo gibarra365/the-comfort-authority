@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Comfort Authority - Tampa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0a0f1e;--orange:#ff6b35;--light:#f8fafc;--gray:#64748b;--white:#ffffff}
+body{font-family:'Inter',sans-serif;color:var(--navy);background:var(--white)}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:999;background:var(--navy);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+.nav-logo{font-family:'Poppins',sans-serif;font-size:18px;font-weight:700;color:var(--orange)}
+.nav-buttons{display:flex;gap:10px}
+.btn-book{background:var(--orange);color:var(--navy);padding:9px 20px;border-radius:8px;font-weight:600;font-size:14px}
+.btn-call{border:2px solid var(--orange);color:var(--orange);padding:7px 18px;border-radius:8px;font-weight:600;font-size:14px}
+.hero{background:linear-gradient(135deg,#0a0f1e 0%,#1a2540 60%,#0d1930 100%);min-height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:60px 24px;color:white}
+.hero-inner{max-width:800px}
+.rating-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,107,53,.15);border:1px solid rgba(255,107,53,.4);padding:8px 20px;border-radius:30px;margin-bottom:28px;font-size:14px;color:var(--orange);font-weight:600}
+.hero h1{font-family:'Poppins',sans-serif;font-size:52px;font-weight:800;line-height:1.1;margin-bottom:20px}
+.hero h1 span{color:var(--orange)}
+.hero p{font-size:19px;color:#94a3b8;margin-bottom:40px;line-height:1.6}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.hero-btn-primary{background:var(--orange);color:var(--navy);padding:16px 36px;border-radius:12px;font-family:'Poppins',sans-serif;font-weight:700;font-size:16px;display:inline-block}
+.hero-btn-secondary{border:2px solid var(--orange);color:var(--orange);padding:14px 34px;border-radius:12px;font-family:'Poppins',sans-serif;font-weight:700;font-size:16px;display:inline-block}
+.trust-bar{background:var(--navy);padding:20px 24px}
+.trust-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.trust-item{color:white}
+.trust-item .ti{font-size:22px;margin-bottom:6px}
+.trust-item p{font-size:13px;color:#94a3b8;font-weight:500}
+.section{padding:80px 24px;max-width:1000px;margin:0 auto}
+.section-tag{font-size:12px;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px}
+.section-title{font-family:'Poppins',sans-serif;font-size:36px;font-weight:700;margin-bottom:40px;color:var(--navy)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service-card{background:var(--light);border-radius:14px;padding:28px;border:1px solid #e2e8f0;transition:transform .2s,box-shadow .2s}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.08)}
+.service-icon{font-size:36px;margin-bottom:14px}
+.service-card h3{font-family:'Poppins',sans-serif;font-size:17px;font-weight:600;margin-bottom:8px}
+.service-card p{font-size:14px;color:var(--gray);line-height:1.6;margin-bottom:16px}
+.service-btn{display:inline-block;background:var(--orange);color:var(--navy);padding:8px 18px;border-radius:8px;font-size:13px;font-weight:600}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;text-align:center}
+.step-num{width:56px;height:56px;background:var(--orange);color:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:22px;font-weight:800;margin:0 auto 16px}
+.step h3{font-family:'Poppins',sans-serif;font-size:18px;font-weight:600;margin-bottom:8px}
+.step p{font-size:14px;color:var(--gray);line-height:1.6}
+.reviews-section{background:var(--navy);padding:80px 24px}
+.reviews-inner{max-width:1000px;margin:0 auto}
+.reviews-inner .section-title{color:white}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.review-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px;color:white}
+.review-stars{color:var(--orange);font-size:18px;margin-bottom:12px}
+.review-text{font-size:14px;color:#cbd5e1;line-height:1.7;margin-bottom:16px}
+.review-author{font-size:13px;font-weight:600;color:var(--orange)}
+.booking-section{background:var(--light);padding:80px 24px}
+.booking-inner{max-width:700px;margin:0 auto;text-align:center}
+.booking-inner .section-title{margin-bottom:10px}
+.booking-sub{font-size:16px;color:var(--gray);margin-bottom:40px}
+.booking-form{background:white;border-radius:16px;padding:40px;box-shadow:0 4px 30px rgba(0,0,0,.08);text-align:left}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+label{font-size:13px;font-weight:600;color:var(--navy)}
+input,select,textarea{padding:12px 16px;border:1px solid #e2e8f0;border-radius:8px;font-size:15px;font-family:'Inter',sans-serif;color:var(--navy);outline:none;transition:border-color .2s;width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--orange)}
+.submit-btn{width:100%;background:var(--orange);color:var(--navy);border:none;padding:16px;border-radius:10px;font-family:'Poppins',sans-serif;font-size:17px;font-weight:700;cursor:pointer;margin-top:8px}
+.confirm-msg{margin-top:16px;font-size:14px;color:var(--gray);text-align:center}
+.contact-section{background:var(--navy);color:white;padding:80px 24px;text-align:center}
+.contact-section .section-title{color:white}
+.big-phone{font-family:'Poppins',sans-serif;font-size:48px;font-weight:800;color:var(--orange);display:block;margin:20px 0}
+.contact-email{color:#94a3b8;font-size:16px;margin-top:8px}
+footer{background:#050810;color:#475569;text-align:center;padding:24px;font-size:13px}
+footer span{color:var(--orange)}
+.float-call{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--orange);color:var(--navy);text-align:center;padding:18px;font-family:'Poppins',sans-serif;font-weight:700;font-size:17px;z-index:9999}
+.chat-bubble{position:fixed;bottom:80px;right:20px;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 4px 20px rgba(0,0,0,.3);z-index:9998}
+@media(max-width:768px){
+  .hero h1{font-size:32px}
+  .services-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .trust-inner{grid-template-columns:repeat(2,1fr)}
+  .float-call{display:block}
+  .nav-buttons .btn-book{display:none}
+  body{padding-bottom:70px}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-logo">The Comfort Authority</div>
+  <div class="nav-buttons">
+    <a href="#booking" class="btn-book">Book Now</a>
+    <a href="tel:8134614819" class="btn-call">&#128222; Call Us</a>
+  </div>
+</nav>
+
+<div class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="rating-pill">&#11088; 4.9/5 &middot; 1790 Google Reviews &middot; Tampa's Trusted Home-Services</div>
+    <h1>Tampa's Most Trusted<br><span>Home-Services</span></h1>
+    <p>Professional home-services service that comes directly to you in Tampa. No waiting rooms. No tow trucks. We fix it wherever you are.</p>
+    <div class="hero-btns">
+      <a href="#booking" class="hero-btn-primary">&#128197; Book Appointment</a>
+      <a href="tel:8134614819" class="hero-btn-secondary">&#128222; Call (813) 461-4819</a>
+    </div>
+  </div>
+</div>
+
+<div class="trust-bar" id="trust">
+  <div class="trust-inner">
+    <div class="trust-item"><div class="ti">&#128737;</div><p>Licensed &amp; Insured</p></div>
+    <div class="trust-item"><div class="ti">&#9889;</div><p>Same Day Service</p></div>
+    <div class="trust-item"><div class="ti">&#11088;</div><p>1790 Five-Star Reviews</p></div>
+    <div class="trust-item"><div class="ti">&#128205;</div><p>Serving Tampa &amp; Area</p></div>
+  </div>
+</div>
+
+<div class="section" id="services">
+  <div class="section-tag">What We Do</div>
+  <div class="section-title">Our Services</div>
+  <div class="services-grid">
+    <div class="service-card"><div class="service-icon">&#128295;</div><h3>HVAC Installation</h3><p>Professional hvac installation service done at your location. Fast, clean, reliable.</p><a href="#booking" class="service-btn">Book This</a></div>
+    <div class="service-card"><div class="service-icon">&#128267;</div><h3>Furnace Repair</h3><p>Expert furnace repair &mdash; we come to wherever you need us in Tampa.</p><a href="#booking" class="service-btn">Book This</a></div>
+    <div class="service-card"><div class="service-icon">&#128694;</div><h3>AC Maintenance</h3><p>Top-quality ac maintenance with professional-grade tools and parts.</p><a href="#booking" class="service-btn">Book This</a></div>
+    <div class="service-card"><div class="service-icon">&#9889;</div><h3>Duct Cleaning</h3><p>Full duct cleaning performed on-site. No shop visit required.</p><a href="#booking" class="service-btn">Book This</a></div>
+    <div class="service-card"><div class="service-icon">&#10052;</div><h3>Thermostat Replacement</h3><p>Professional thermostat replacement to keep you running smooth in Tampa.</p><a href="#booking" class="service-btn">Book This</a></div>
+    <div class="service-card"><div class="service-icon">&#128297;</div><h3>Indoor Air Quality Testing</h3><p>Ask about our indoor air quality testing &mdash; most jobs completed same day on-site.</p><a href="#booking" class="service-btn">Book This</a></div>
+  </div>
+</div>
+
+<div style="background:var(--light);padding:80px 24px">
+  <div class="section" style="padding:0">
+    <div class="section-tag">The Process</div>
+    <div class="section-title">How It Works</div>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><h3>Book Online</h3><p>Use our form below or call us. Tell us what you need and where you are in Tampa.</p></div>
+      <div class="step"><div class="step-num">2</div><h3>We Come To You</h3><p>Our technician arrives at your home, office, or wherever is convenient. No towing needed.</p></div>
+      <div class="step"><div class="step-num">3</div><h3>Job Done Right</h3><p>We complete the work on-site with professional tools and quality parts. You are back on track.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="reviews-section" id="reviews">
+  <div class="reviews-inner">
+    <div class="section-tag" style="color:var(--orange)">What Customers Say</div>
+    <div class="section-title">Real Google Reviews</div>
+    <div class="reviews-grid">
+      <div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="review-text">"Luis serviced my HVAC/AC and Dalton took care of plumbing/water heater. Both services handled with perfection and very detailed. I had a water heater installed in 2006 that needed an immediate swap out. 2 hours later I had a new water heate"</p><div class="review-author">&mdash; Verified Google Review</div></div>
+      <div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="review-text">"Great service, even better people
+
+Big shoutout to the team at The Comfort Authority! We just replaced an aging AC unit with them (thanks to Luis for the initial inspection, Derek for the help with the planning and design, and Gary & Shiar "</p><div class="review-author">&mdash; Verified Google Review</div></div>
+      <div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="review-text">"Highly recommend The Comfort Authority, absolutely fantastic company and service! Our home a/c system was 9 years old and needed repairs. We contacted The Comfort Authority to ask for an estimate. Derek Deese came out to our home with a tec"</p><div class="review-author">&mdash; Verified Google Review</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="booking-section" id="booking">
+  <div class="booking-inner">
+    <div class="section-tag">Get Started</div>
+    <div class="section-title">Book Your Appointment</div>
+    <p class="booking-sub">Fill out the form and we will confirm within 2 hours. Or call us directly at (813) 461-4819.</p>
+    <div class="booking-form">
+      <div class="form-row">
+        <div class="form-group"><label>Your Name</label><input type="text" id="fn" placeholder="John Smith" required></div>
+        <div class="form-group"><label>Your Phone</label><input type="tel" id="fp" placeholder="(555) 000-0000" required></div>
+      </div>
+      <div class="form-group"><label>Your Email</label><input type="email" id="fe" placeholder="john@email.com"></div>
+      <div class="form-group"><label>Service Needed</label>
+        <select id="fs">
+          <option value="">Select a service...</option>
+          <option>HVAC Installation</option><option>Furnace Repair</option><option>AC Maintenance</option>
+          <option>Duct Cleaning</option><option>Thermostat Replacement</option><option>Indoor Air Quality Testing</option>
+          <option>Not sure &mdash; need diagnosis</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Preferred Date</label><input type="date" id="fd"></div>
+        <div class="form-group"><label>Preferred Time</label><input type="time" id="ft"></div>
+      </div>
+      <div class="form-group"><label>Additional Notes</label><textarea id="fn2" rows="3" placeholder="Location, vehicle details, anything else we should know..."></textarea></div>
+      <button class="submit-btn" onclick="submitBooking()">Request Appointment &#8594;</button>
+      <p class="confirm-msg">&#9989; We confirm all appointments within 2 hours &middot; No payment required to book</p>
+    </div>
+  </div>
+</div>
+
+<div class="contact-section" id="contact">
+  <div class="section-tag" style="color:var(--orange)">Reach Us</div>
+  <div class="section-title">Call or Text Anytime</div>
+  <a href="tel:8134614819" class="big-phone">(813) 461-4819</a>
+  
+  <p style="color:#64748b;margin-top:16px">Serving Tampa and surrounding areas &middot; Available 7 days a week</p>
+</div>
+
+<footer id="footer">
+  &copy; 2026 The Comfort Authority &middot; Tampa &middot; <a href="tel:8134614819" style="color:var(--orange)">(813) 461-4819</a>
+  <br><span style="font-size:11px;color:#2d3748">Website by GDI Web Solutions &middot; Preview: tampacomfortauthority.com</span>
+</footer>
+
+<a href="tel:8134614819" class="float-call">&#128222; Call Now &mdash; (813) 461-4819</a>
+<a href="tel:8134614819" class="chat-bubble">&#128222;</a>
+
+<script>
+function submitBooking() {
+  var name = document.getElementById('fn').value;
+  var phone = document.getElementById('fp').value;
+  var email = document.getElementById('fe').value;
+  var service = document.getElementById('fs').value;
+  var date = document.getElementById('fd').value;
+  var time = document.getElementById('ft').value;
+  var notes = document.getElementById('fn2').value;
+  if(!name || !phone || !service) { alert('Please fill in your name, phone, and service needed.'); return; }
+  var body = 'New Booking Request%0A%0AName: ' + encodeURIComponent(name) + '%0APhone: ' + encodeURIComponent(phone) + '%0AEmail: ' + encodeURIComponent(email) + '%0AService: ' + encodeURIComponent(service) + '%0ADate: ' + encodeURIComponent(date) + '%0ATime: ' + encodeURIComponent(time) + '%0ANotes: ' + encodeURIComponent(notes);
+  window.location.href = 'tel:8134614819';
+  document.querySelector('.booking-form').innerHTML = '<div style="text-align:center;padding:40px"><div style="font-size:48px;margin-bottom:16px">&#9989;</div><h3 style="font-family:Poppins,sans-serif;font-size:24px;margin-bottom:10px">Request Sent!</h3><p style="color:#64748b">We will confirm your appointment within 2 hours.<br>Questions? Call us at (813) 461-4819</p></div>';
+}
+</script>
+
+</body>
+</html>
